@@ -1,1 +1,2 @@
-# nvim-configs
+# nvim-configs 💾
+
