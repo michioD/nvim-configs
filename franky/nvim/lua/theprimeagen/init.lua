@@ -2,59 +2,6 @@ require("theprimeagen.set")
 require("theprimeagen.remap")
 require("theprimeagen.lazy_init")
 
-
--- vim.cmd("set expandtab")
--- vim.cmd("set tabstop=2") vim.cmd("set softtabstop=2") vim.cmd("set shiftwidth=2")
-
--- Enable mouse support
-vim.opt.mouse = "a"  
-
--- Enable line numbers by default
-vim.opt.number = true
-
-
-
--- Enable relative line numbers by default
--- vim.opt.relativenumber = true
-
--- Set tab width vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
-
--- Enable syntax highlighting
-vim.cmd('syntax on')
-
--- Enable auto-indentation
-vim.cmd('filetype plugin indent on')
-
--- Set clipboard to use system clipboard
-vim.opt.clipboard = 'unnamedplus'
-
--- Set a better status line
-vim.opt.laststatus = 2
-
--- Set color scheme
--- vim.cmd('colorscheme desert')
--- vim.cmd('colorscheme elflord')
--- vim.cmd('colorscheme evening')
--- vim.cmd('colorscheme industry')
---
--- Remove M characters 
-vim.cmd [[command! RemoveM %s/\r//g]]
-
--- Packer configuration
-vim.cmd [[packadd packer.nvim]]
-
--- Define autocmd to set nonumber and norelativenumber in terminal buffers
-vim.cmd([[
-  augroup TerminalSettings
-    autocmd!
-    autocmd TermOpen * setlocal nonumber norelativenumber
-  augroup END
-]])
-
-
-
 -- DO.not
 -- DO NOT INCLUDE THIS
 
@@ -115,10 +62,7 @@ autocmd('LspAttach', {
         vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
     end
 })
-
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 25
-vim.opt.clipboard = 'unnamedplus'
 
-vim.opt.mouse = 'a'
